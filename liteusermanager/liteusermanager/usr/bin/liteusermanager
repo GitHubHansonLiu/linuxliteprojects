@@ -345,7 +345,7 @@ class Users(gtk.HBox):
             else:
                 # Normal MD5 password
                 pwcrypt = encryptPW(pw)
-            ccode, op = gui.rootrun("useradd -m -g users -p '%s' %s" %
+            ccode, op = gui.rootrun("useradd --shell=/bin/bash -m -G users,adm,cdrom,dip,plugdev,lpadmin,sambashare -p '%s' %s" %
                     (pwcrypt, user))
             if (ccode != 0):
                 error(_("It was not possible to add  user '%s'."
@@ -451,7 +451,7 @@ class CheckList(gtk.ScrolledWindow):
         self.treeview.set_model(self.liststore)
         # create CellRenderers to render the data
         celltoggle = gtk.CellRendererToggle()
-        #celltoggle.set_property('activatable', True)
+        celltoggle.set_property('activatable', True)
         celltoggle.connect( 'toggled', self.toggled_cb)
         celltext = gtk.CellRendererText()
         # create the TreeViewColumn to display the groups
