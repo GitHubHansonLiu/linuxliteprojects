@@ -12,5 +12,8 @@ Nothing here is final, just ideas.
 - [ ] here
 - [ ] more here
 - [ ] Package a .deb with a few themes, curors, gtk etc
+- [ ] Deb package Help Manual
+- [ ] Deb package Login
+- [ ] Deb package Scripts
 - [ ] Fix Zoose
 - [x] Fix exit issue on scripts for **64bit**
